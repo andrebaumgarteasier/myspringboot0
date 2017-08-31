@@ -37,5 +37,9 @@ public class GreetingController {
     }
     
 
+    @RequestMapping("/api/goodbye")
+    public String goodbye(@RequestParam(value="name", defaultValue="World") String name) {
+      return "Goodbye " + name + " " +  new java.util.Date();
+}
 
 }
